@@ -9,7 +9,7 @@
 #pragma once
 
 #include "clientserver/clienttestactor.hpp"
-#include "simplx_core/connector/tcpconnector.hpp"
+#include "connector/tcpconnector.hpp"
 
 namespace simplx
 {

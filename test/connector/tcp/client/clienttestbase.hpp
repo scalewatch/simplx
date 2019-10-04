@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "simplx_core/connector/tcpconnector.hpp"
+#include "connector/tcpconnector.hpp"
 
 #include "gtest/gtest.h"
 

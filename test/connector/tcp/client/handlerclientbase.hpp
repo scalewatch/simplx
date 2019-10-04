@@ -9,9 +9,9 @@
 #pragma once
 
 
-#include "simplx_core/connector/tcpconnector.hpp"
-#include "simplx_core/connector/tcp/client/iclient.hpp"
-#include "simplx_core/connector/tcp/common/network.hpp"
+#include "connector/tcpconnector.hpp"
+#include "connector/tcp/client/iclient.hpp"
+#include "connector/tcp/common/network.hpp"
 #include "common/networkcallsmock.hpp"
 #include "common/testvariables.hpp"
 #include "gtest/gtest.h"
