@@ -1,5 +1,5 @@
 /**
- * @file ringbuffer.hpp
+ * @file xthreadbus.hpp
  * @brief bus creating chanel then pair producer/consumer
  on it handling errors
  * @copyright 2019 Scalewatch (www.scalewatch.com). All rights reserved.
