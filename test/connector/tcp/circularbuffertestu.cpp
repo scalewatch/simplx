@@ -1,3 +1,10 @@
+/**
+ * @file circularbuffertestu.cpp
+ * @brief unit test of the circular buffer
+ * @copyright 2019 Scalewatch (www.scalewatch.com). All rights reserved.
+ * Please see accompanying LICENSE file for licensing terms.
+ */
+
 #include <iostream>
 #include <sstream>
 #include <string>
