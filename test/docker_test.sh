@@ -15,7 +15,7 @@ compiler_set_3="8.2"
 [ "$dorelease" == "" ] && dorelease="1"
 [ "$dodebug" == "" ] && dodebug="1"
 
-[ "$dotestengine" == "" ] && dotestengine="1"
+[ "$dotestsimplx_core" == "" ] && dotestsimplx_core="1"
 [ "$dotestconnector" == "" ] && dotestconnector="1"
 [ "$dotutorials" == "" ] && dotutorials="1"
 
@@ -27,8 +27,8 @@ for i in $compiler_set
 do
 
 # unitary tests simplx_core
- echo [engine] using [$i]
- [ "$dotestengine" == "1" ] && docker run -it -v $DIR/../:/simplx -u $(id -u):$(id -g) --rm volatilebitfield/cpp:$i bash -c " ! ( rm -rf /simplx/test/build && mkdir /simplx/test/build && cd /simplx/test/build/ &&  cmake $* .. && make -j8 && make test ) && echo [DEADBEEF] FAILED [$i]" | tee $tmpfile ; grep "DEADBEEF" $tmpfile > /dev/null && exit
+ echo [simplx_core] using [$i]
+ [ "$dotestsimplx_core" == "1" ] && docker run -it -v $DIR/../:/simplx -u $(id -u):$(id -g) --rm volatilebitfield/cpp:$i bash -c " ! ( rm -rf /simplx/test/build && mkdir /simplx/test/build && cd /simplx/test/build/ &&  cmake $* ../simplx_core && make -j8 && make test ) && echo [DEADBEEF] FAILED [$i]" | tee $tmpfile ; grep "DEADBEEF" $tmpfile > /dev/null && exit
 
 # unitary tests connector tcp
  echo [TCP] using [$i]
