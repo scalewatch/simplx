@@ -1,3 +1,10 @@
+/**
+ * @file ringbuffer.hpp
+ * @brief spsc circular buffer use to store pointer to data
+ exchanged between threads
+ * @copyright 2019 Scalewatch (www.scalewatch.com). All rights reserved.
+ * Please see accompanying LICENSE file for licensing terms.
+ */
 #pragma once
 
 #include <algorithm>
