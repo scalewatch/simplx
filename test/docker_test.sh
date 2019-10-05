@@ -28,7 +28,7 @@ do
 
 # unitary tests simplx_core
  echo [simplx_core] using [$i]
- [ "$dotestsimplx_core" == "1" ] && docker run -it -v $DIR/../:/simplx -u $(id -u):$(id -g) --rm volatilebitfield/cpp:$i bash -c " ! ( rm -rf /simplx/test/build && mkdir /simplx/test/build && cd /simplx/test/build/ &&  cmake $* ../simplx_core && make -j8 && make test ) && echo [DEADBEEF] FAILED [$i]" | tee $tmpfile ; grep "DEADBEEF" $tmpfile > /dev/null && exit
+ [ "$dotestsimplx_core" == "1" ] && docker run -it -v $DIR/../:/simplx -u $(id -u):$(id -g) --rm volatilebitfield/cpp:$i bash -c " ! ( rm -rf /simplx/test/simplx_core/build && mkdir /simplx/test/simplx_core/build && cd /simplx/test/simplx_core/build/ &&  cmake $* .. && make -j8 && make test ) && echo [DEADBEEF] FAILED [$i]" | tee $tmpfile ; grep "DEADBEEF" $tmpfile > /dev/null && exit
 
 # unitary tests connector tcp
  echo [TCP] using [$i]
