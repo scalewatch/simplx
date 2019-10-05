@@ -1,4 +1,4 @@
-#include "simplx_core/connector/httpconnector.hpp"
+#include "connector/httpconnector.hpp"
 #include "simplx.h"
 
 using namespace simplx;
