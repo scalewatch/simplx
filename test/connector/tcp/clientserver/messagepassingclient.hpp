@@ -9,10 +9,10 @@
 #pragma once
 
 #include "clientserver/clienttestactor.hpp"
-#include "simplx_core/connector/tcpconnector.hpp"
+#include "connector/tcpconnector.hpp"
 
-// #include "simplx_core/connectors/tcp/client/iclient.hpp"
-// #include "simplx_core/connectors/tcp/common/networkcalls.hpp"
+// #include "connectors/tcp/client/iclient.hpp"
+// #include "connectors/tcp/common/networkcalls.hpp"
 // #include "test/client/handlerclientbase.hpp"
 // #include "test/clientserver/clienttestactor.hpp"
 // #include "test/common/testcodec.hpp"

@@ -11,7 +11,7 @@
 
 #include "clientserver/eventandservicetag.hpp"
 #include "server/servertestbase.hpp"
-#include "simplx_core/connector/tcp/server/iserver.hpp"
+#include "connector/tcp/server/iserver.hpp"
 
 namespace simplx
 {

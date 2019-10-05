@@ -10,7 +10,7 @@
 
 #include "client/clienttestbase.hpp"
 #include "clientserver/eventandservicetag.hpp"
-#include "simplx_core/connector/tcpconnector.hpp"
+#include "connector/tcpconnector.hpp"
 
 namespace simplx
 {

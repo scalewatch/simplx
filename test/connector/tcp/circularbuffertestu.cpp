@@ -10,7 +10,7 @@
 #include <string>
 #include <tuple>
 
-#include "simplx_core/connector/tcpconnector.hpp"
+#include "connector/tcpconnector.hpp"
 #include "gtest/gtest.h"
 
 using namespace simplx;

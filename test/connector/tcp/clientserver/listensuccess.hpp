@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "simplx_core/connectors/tcp/server/server.hpp"
+#include "connectors/tcp/server/server.hpp"
 #include "test/client/handlerclientbase.hpp"
 #include "test/common/networkcallsmock.hpp"
 #include "test/common/testcodec.hpp"
