@@ -16,21 +16,30 @@ include_directories(${SIMPLX_DIR}/include)
 
 function(simplx_core_set_cxx_flags)
     
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++11")
-    
+    if (DEFINED CMAKE_CXX_FLAGS AND NOT ${CMAKE_CXX_FLAGS} STREQUAL "")
+	# do nothing
+	message("CMAKE_CXX_FLAGS is ${CMAKE_CXX_FLAGS}")
+    else()
+        # if there is nothing so far set a reasonable default
+        set(CMAKE_CXX_FLAGS "-std=c++11")
+    endif()
+
     # search for user-defined c++ version
-    string(FIND ${CMAKE_CXX_FLAGS} "--std=c++" USER_CXX_VERSION_POS)
+    string(FIND ${CMAKE_CXX_FLAGS} "-std=c++" USER_CXX_VERSION_POS)
     if (USER_CXX_VERSION_POS GREATER -1)
         # user-defined C++ version
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
     else()
         # default is c++11
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++11")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
     endif()
 
     # add pthread
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")    
-
+    string(FIND ${CMAKE_CXX_FLAGS} "-pthread" USER_CXX_HAS_PTHREAD)
+    if (USER_CXX_HAS_PTHREAD EQUAL -1)
+        # pthread not yet defined in CXX_FLAGS
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")    
+    endif()
     # set C++ compiler options
     if (${CMAKE_CXX_COMPILER_ID} STREQUAL "GNU")
         # gcc
