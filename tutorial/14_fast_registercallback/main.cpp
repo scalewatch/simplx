@@ -33,7 +33,6 @@ int main()
 
 	Engine engine(start_seq);
 
-
 	getchar();
 	return 0;
 }

@@ -42,8 +42,7 @@ class FastCallbackSingleton : public Actor, public Actor::Callback
 	}
 
   private:
-
-	// two lists are used to avoid infinite recursion between callback-registration and callback-call
+	// two lists are used to avoid infinite recursions between callback-registration and callback-call
 	std::list<FastRegisterCallback *> callbacks;
 	std::list<FastRegisterCallback *> inception_callbacks;
 	bool isFastRegistered = false;
